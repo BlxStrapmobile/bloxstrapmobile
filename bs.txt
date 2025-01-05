@@ -1,10 +1,3 @@
-getgenv().autosetup = {
-    path = 'Bloxstrap', --> doesnt work rn
-    setup = true --> init after installaiton
-}
-loadstring(game.HttpGet(game, 'https://raw.githubusercontent.com/qwertyui-is-back/Bloxstrap/refs/heads/main/installer.lua', true))()```
-
-
 getgenv().writefile = writefile or function(str: string) return nil end
 getgenv().readfile = readfile or function(str: string) return nil end
 getgenv().loadfile = loadfile or function(str: string) return loadstring(readfile(str)) end
