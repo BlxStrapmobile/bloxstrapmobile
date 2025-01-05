@@ -1,0 +1,15 @@
+getgenv().autosetup = {
+    path = 'Bloxstrap', --> doesnt work rn
+    setup = true --> init after installaiton
+}
+loadstring(game.HttpGet(game, 'https://raw.githubusercontent.com/qwertyui-is-back/Bloxstrap/refs/heads/main/installer.lua', true))()```
+
+
+getgenv().writefile = writefile or function(str: string) return nil end
+getgenv().readfile = readfile or function(str: string) return nil end
+getgenv().loadfile = loadfile or function(str: string) return loadstring(readfile(str)) end
+
+getgenv().errorlog = getgenv().errorlog or "Bloxstrap/Logs/crashlog"..cloneref(game.GetService(game, "HttpService")):GenerateGUID(false)..".txt"
+local Bloxstrap: table = loadfile("Bloxstrap/Main/Bloxstrap.lua")()
+Bloxstrap.start(false)
+game.CoreGui["redz Library V5"].Enabled = false ```
